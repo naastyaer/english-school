@@ -9,11 +9,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;0,800;1,700&family=Source+Serif+4:wght@200&display=swap" rel="stylesheet">
-    
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
  </head>
     <body>
-        <header id="header">
-            <div id="content">
+        <header class="header">
+            <div class="block-opacity">
+            <div class="content">
                 <nav id="menu">
                     <div>
                         <img src="logo.svg" id="menu__component_logo"> 
@@ -28,15 +29,17 @@
                     </div>
                 </nav>
             <div id="text_header">
-                <h1 id="text_header__title">Лучший способ заговорить на английском</h1>
+                <h1 class="text_header__title">Лучший способ заговорить на английском</h1>
                 <div id="text_header__div"> 
                     <p id="text_header__div__title">Занимайся онлайн в удобное время в любом месте! Запишитесь на бесплатный пробный урок уже сегодня.</p>
                 </div>
-                <button id="button">Записаться на пробный урок</button>  
+                
+            </div>
+            <button id="button">Записаться на пробный урок</button>  
             </div>
         </header>
         <div>
-            <div id="content">
+            <div class="content">
                 <h1 class="heading">Начните разговаривать с первого занятия </h1>
                 <div class="positive">
                     <div class="positive__block"> 
@@ -57,7 +60,7 @@
                 </div>
                 <div class="positive__block_2">
                     <div class="positive__block_2_text"> 
-                     <h1 class="heading">Мы научим говорить уверенно!</h1>
+                     <h1 class="heading" id="heading_right" >Мы научим говорить уверенно!</h1>
                      <p1 id="positive__block_2_text_text"> Мы считаем, что главная задача языка - помочь нам общаться друг с другом. 
                         Поэтому на наших занятиях мы отдаем приоретет разговорной речи и навыкам аудирования.</p1>
                      <p1 id="positive__block_2_text_text">Мы не изучаем грамматические правила по учебнику, мы не выполняем задания, где нужно раскрыть скобки или 
@@ -70,7 +73,7 @@
              </div> 
         </div>
         <div class="form">
-          <div id="content">
+          <div class="content">
             <h1 class="heading">Запишитесь на бесплатный урок уже сегодня</h1>
             <p1 id="form_text">Преподаватель определит ваш уровень и Вы пройдете полноценный первый урок</p1>
            </div>
@@ -86,8 +89,8 @@
              <button id="button">Записаться на пробный урок</button>
             </div>
         </div>
-        <div id="reviews">
-         <div id="content" >
+        <div id="reviews" >
+         <div class="content" id="content_rereviews" >
             <h1 class="heading">У нас уже более 500 довольных учеников!</h1>
             <div  id="reviews_block">
                  <h2 id="reviews_block_title">Ольга Морозова</h2>
@@ -110,9 +113,9 @@
          </div>
         </div>
         <div id="price">
-         <div id="content">
+         <div class="content" id="content_rereviews">
             <h1 class="heading">Наши абонементы</h1>
-          <div id="content_price">
+          <div id="content_price" >
               <div id="content_price_block">
                  <div>
                     <p id="content_price_block_text_orange">1 месяц</p1>
@@ -156,13 +159,13 @@
          </div>
         </div>
         <footer id="footer">
-            <div id="content">
+            <div class="content">
              <div id="footer_contacts">
                 <div>
                     <i  id="footer_contacts_icon"  class="fa-solid fa-phone"></i>
                     <p1 id="contetn_contacts_telephone"> 89277523258</p1>
                 </div>
-                <div>
+                <div class="icon">
                     <i id="footer_contacts_icon_hover" class="fa-brands fa-instagram"></i>
                     <i  id="footer_contacts_icon_hover" class="fa-brands fa-facebook"></i>
                     <i id="footer_contacts_icon_hover" class="fa-brands fa-twitter"></i>

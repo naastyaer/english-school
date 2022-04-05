@@ -2,23 +2,35 @@
     --darkgrey-color: #57534E;
     --orange-color: #f97316;
 }
-#header {
-    background-image: url("hero.jpg");
-    height:750px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-#content{
+.content{
     max-width: 1024px;
     margin: 0 auto;  
 }
+.text_header__title{
+    font-size: 20%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+/*вводный блок*/
+header {
+    background-image: url("hero.jpg") ;
+    
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    max-width: 100%;
+
+}
+
+
+
 #menu{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
+
 #menu__component{
     font-size: 20px;
     margin-left: 20px;
@@ -43,14 +55,11 @@
     margin-top: 20pxs;
 }
 #text_header{
-    width: 450px;
-    height: 550px;
-    margin-top: 110px; 
+    width: 45%;
+    /*height: 550px;*/
+    margin-top: 11%; 
 }
-#text_header__title{
-    font-size: 60px;
-    font-family: 'Nunito Sans', sans-serif;
-}
+
 #text_header__div__title{
     font-size: 20px;
     font-family: 'Nunito Sans', sans-serif;
@@ -69,25 +78,50 @@
     padding-left: 32px;
     padding-right: 32px;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 12%;
+    margin-bottom: 10%;
     cursor: pointer;
 }
 #button:hover {
     background: #c95a00;
 }
+@media (max-width: 600px) {
+    header{
+        max-width: 100%;
+    }
+    .text_header__title{
+        font-size: 45px;
+    }
+    .block-opacity{
+        background-color:  rgba(232, 223, 223, 0.7);
+        width: 100%;
+        height: 100%;
+        
+    }
+    #text_header{
+        max-width: 50%;
+        margin-left: 15px;
+        
+    }
+    #telephone{
+        margin-left: 3%;
+    }
 
+}
+/*вводный блок*/
+/*блок преимущества*/
 .heading{
     font-size: 36px;
     text-align: center;
     font-family: 'Nunito Sans', sans-serif;
-    margin-top: 50px;
+    /*margin-top: 15%;*/
 }
 .positive{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 300px;
+    
     margin-top: 30px;
 }
 .positive__block{
@@ -118,9 +152,10 @@
 }
 #positive__block_icon{
     display: inline-block;
-    align-items: centers;
+    
+    align-items: center;
     font-size: 30px;
-    margin-left: 140px;
+    margin-left: 46%;
     margin-bottom: 45px;
     background-color: var(--orange-color);
     padding-left: 10px;
@@ -142,8 +177,8 @@
     width: 600px;
 }
 .img_group-people{
-    width: 450px;
-    height: 350px;
+    width: 350px;
+    height: 250px;
 }
 #positive__block_2_text_text{
     display:inline-block;
@@ -155,6 +190,43 @@
     line-height:20px;
     color: #44403C;
 }
+@media (max-width: 600px) {
+    .positive{
+        display: flex;
+        flex-direction: column;
+    }
+    .positive__block{
+        margin-top: 5%;
+    }
+    #positive__block_icon{
+    display: inline-block;
+        align-items: center;
+        margin-left: 45%;
+    }
+    .positive__block_2{
+        display: flex;
+        flex-direction: column;
+    }
+    .img_group-people{
+        width: 75%;
+        height: 55%;
+    }
+    .positive__block_2_text{
+        height: 40%;
+        width: 90%;
+    }
+    #heading_right{
+        text-align:left;
+    }
+    #positive__block_text{
+    font-size: 19px;
+    }
+    #positive__block_title {
+    font-size: 25px;
+    }
+}
+/*блок преимущества*/
+/*блок форма*/
 .form{
     background-color:#ffedd5;
     margin: auto;
@@ -193,20 +265,42 @@
     border-radius: 8px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+@media (max-width: 600px) {
+    #form_text{
+        text-align: center;
+        margin-left: 0%;
+    }
+    #registration{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1024px;
+        margin: 0 auto;  
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+    .input_form{
+        margin-top: 3%;
+    }
+    
+}
+/*блок форма*/
+/*блок отзывы*/
 #reviews{
     background-color: #d6d3d1;
     padding-top: 70px;
     padding-bottom: 70px;
     display: flex ;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 }
 #reviews_block{
     padding-left: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-top: 40px;
+    
 }
 #reviews_block_title{
     font-size: 20px;
@@ -215,6 +309,7 @@
     font-family: 'Lato', sans-serif;   
 }
 #reviews_block_text{
+    
     display:inline-block;
     font-size: 15px;
     text-align: left;
@@ -223,8 +318,35 @@
     margin-top: 15px;
     line-height:20px;
     color: #44403C;
+    padding-bottom: 5%;
     border-bottom: 1px solid var(--orange-color);
+
+    
 }
+@media (max-width: 600px) {
+    #reviews_block{
+        margin-left: 5%;
+        margin-top: 40px;
+        margin-right: -10px;
+    }  
+    #reviews_block_text{
+        display:inline-block;
+        font-size: 20px;
+        font-family: 'Nunito Sans', sans-serif;
+        
+        margin-top: 15px;
+        line-height:20px;
+        color: #44403C;
+       
+        
+    }
+    /*#reviews_block_text{
+        background-color: #f97316;
+    }*/
+ 
+}
+/*блок отзывы*/
+/*блок прайс*/
 #price{
     background-color: #fafaf9;
     padding-top: 70px;
@@ -309,7 +431,31 @@
     color: #65a30d;
     margin-right: 10px;
 }
+@media (max-width: 600px) {
+    #content_price{
+        margin-top: 30px;
+        display: flex ;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #content_price_block{ 
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin-top: 5%;
+        border: 1px solid #d6d3d1;
+        border-radius: 8px;
+        padding-left: 20%;
+        padding-right: 20%;
+        
+    }
 
+    
+     
+}
+/*блок прайс*/
+/* футор*/
 #footer{
     background-color:#d6d3d1;
     padding-top: 50px;
@@ -345,7 +491,18 @@
     color: var(--darkgrey-color);
     font-family: 'Nunito Sans', sans-serif;
 }
-
+@media (max-width: 600px) {
+    #footer_contacts{  
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+/* футор*/
 
     
 
